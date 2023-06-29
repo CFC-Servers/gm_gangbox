@@ -11,3 +11,6 @@ include( "modules/random.lua" )
 
 AddCSLuaFile( "modules/identity.lua" )
 include( "modules/identity.lua" )
+
+AddCSLuaFile( "modules/alerts.lua" )
+include( "modules/alerts.lua" )
