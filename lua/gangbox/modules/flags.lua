@@ -34,7 +34,7 @@ function gb.ParseFlags( subject, flagset )
 
     elseif typeID == TYPE_ENTITY then
         MsgC( headerColor, "Entity Flags for: " )
-        MsgC( infoColor, tostring( subject ), "\n" )
+        MsgC( infoColor, tostring( subject ), "\n\n" )
         parseFlags( subject:GetFlags(), gb.Bitflags.Entity )
 
     elseif typeID == TYPE_DAMAGEINFO then
@@ -51,10 +51,10 @@ function gb.ParseFlags( subject, flagset )
         MsgC( headerColor, "Material flags for: " )
         MsgC( infoColor, subject:GetName(), "\n\n" )
 
-        MsgC( infoColor, "$flags:", "\n" )
+        MsgC( infoColor, "[\"$flags\"]:", "\n" )
         parseFlags( subject:GetInt( "$flags" ), gb.Bitflags.MaterialFlags )
 
-        MsgC( infoColor, "$flags2:", "\n" )
+        MsgC( infoColor, "[\"$flags2\"]:", "\n" )
         parseFlags( subject:GetInt( "$flags2" ), gb.Bitflags.MaterialFlags2 )
     else
         error( "Cannot parse flags for type " .. type( subject ) .. " (" .. tostring( typeID ) .. ")" )
