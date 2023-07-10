@@ -1,5 +1,5 @@
-AddCSLuaFile( "flag_values.lua" )
-include( "flag_values.lua" )
+AddCSLuaFile( "values.lua" )
+include( "values.lua" )
 
 local headerColor = Color( 220, 220, 220 )
 local nameColor = Color( 200, 200, 255 )
