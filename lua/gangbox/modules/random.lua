@@ -59,7 +59,16 @@ do
     --- Returns a random entity
     --- @return Entity "The random entity"
     function gb.RandomEnt()
-        allEnts = allEnts or ents.GetAll()
+        if not allEnts then
+            allEnts = ents.GetAll()
+
+            for i = #allEnts, 1, -1 do
+                if string.StartsWith( allEnts[i]:GetClass(), "class " ) then
+                    table.remove( allEnts, i )
+                end
+            end
+        end
+
         return allEnts[math.random( #allEnts )]
     end
 
