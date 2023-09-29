@@ -26,3 +26,6 @@ include( "modules/flags/flags.lua" )
 
 AddCSLuaFile( "modules/gc.lua" )
 include( "modules/gc.lua" )
+
+AddCSLuaFile( "modules/thread.lua" )
+include( "modules/thread.lua" )
