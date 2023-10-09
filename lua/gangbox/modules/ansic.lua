@@ -1,5 +1,6 @@
--- == MsgC Ansi Wrapper == --
-local _MsgC = _G["_MsgC"]
+-- MsgC but with Colors converted to ANSI codes for server console output
+
+local _MsgC = rawget( _G, "MsgC" )
 
 local startColor = "\x1b[38;2;"
 local endColor = "\x1b[0m"

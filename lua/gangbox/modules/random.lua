@@ -128,7 +128,7 @@ do
         end
     end
 
-    --- Returns a random table
+    --- Returns a table filled with a configurable number of random elements
     --- @param count number? The total number of elements in the table (default: 1000)
     function gb.RandomTable( count )
         local tbl = {}

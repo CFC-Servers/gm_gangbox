@@ -50,6 +50,10 @@ local function formatValue( str, k, indent )
     return str
 end
 
+--- Prints a git-like Diff between two tables
+--- @param t1 table First Table
+--- @param t2 table Second Table
+--- @param indent string? Internal indentation tracker
 function gb.Diff( t1, t2, indent )
     indent = indent or ""
 
@@ -63,7 +67,7 @@ function gb.Diff( t1, t2, indent )
 
         elseif TypeID( v ) == TYPE_TABLE and TypeID( t2[k] ) == TYPE_TABLE then
             MsgC( COLOR_WHITE, indent, "  ", strK, " = ", "\n" )
-            printTableDiff( v, t2[k], indent .. "  " )
+            gb.Diff( v, t2[k], indent .. "  " )
 
         elseif strV ~= t2strV then
             MsgC( COLOR_RED, indent, "- ", strK, " = ", strV, "\n" )

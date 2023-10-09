@@ -12,9 +12,6 @@ include( "modules/tables.lua" )
 AddCSLuaFile( "modules/random.lua" )
 include( "modules/random.lua" )
 
-AddCSLuaFile( "modules/identity.lua" )
-include( "modules/identity.lua" )
-
 AddCSLuaFile( "modules/alerts.lua" )
 include( "modules/alerts.lua" )
 
@@ -29,3 +26,6 @@ include( "modules/gc.lua" )
 
 AddCSLuaFile( "modules/thread.lua" )
 include( "modules/thread.lua" )
+
+AddCSLuaFile( "modules/grep.lua" )
+include( "modules/grep.lua" )

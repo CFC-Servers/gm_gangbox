@@ -1,23 +1,7 @@
 local colors = gb.Colors
 
 do
-    -- Lua Refresh alert
-    local reloads = 0
-    hook.Add( "OnReloaded", "GB_AlertsReload", function()
-        print( "[GB] Lua Refresh detected" )
-        reloads = reloads + 1
-    end )
-
-    timer.Create( "GB_AlertsReload", 1, 0, function()
-        if reloads > 0 then
-            MsgC( colors.highlight, "[GB] ", colors.bad, "Lua Refresh detected (x" .. reloads .. ")\n" )
-            reloads = 0
-        end
-    end )
-end
-
-do
-    -- file.Write with invalid suffix
+    -- Alerts about file.Write with invalid suffix
     -- (Silent failure)
 
     local validSuffix = {
@@ -60,7 +44,7 @@ do
 end
 
 do
-    -- Entity:AddCallback with nil return
+    -- Alerts Entity:AddCallback with nil return
 
     local entityMeta = FindMetaTable( "Entity" )
     entityMeta._GB_AddCallback = entityMeta._GB_AddCallback or entityMeta.AddCallback

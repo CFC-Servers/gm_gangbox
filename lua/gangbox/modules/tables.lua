@@ -1,3 +1,7 @@
+--- Filter a table down to a new set of elements using a given function
+--- @param tbl table The table to filter
+--- @param comp function The filter function, return true to include element in the output
+--- @return table filtered The return table
 gb.Filter = function( tbl, comp )
     local ret = {}
 
@@ -10,6 +14,10 @@ gb.Filter = function( tbl, comp )
     return ret
 end
 
+--- Run the given function on all elements in the given table
+--- @param tbl table The table to map
+--- @param func function The function to run on all elements
+--- @return table mappedResults The output of the given function for all elements in the given table
 gb.Map = function( tbl, func )
     local ret = {}
 
@@ -20,6 +28,10 @@ gb.Map = function( tbl, func )
     return ret
 end
 
+--- Recursively count the total elements in the given table
+--- @param tbl table The table to recursively count
+--- @param visited table? Internal state tracker
+--- @return number count The total number of elements in the table
 gb.CountRecursive = function( tbl, visited )
     local count = 0
     visited = visited or {}

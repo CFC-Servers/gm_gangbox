@@ -29,7 +29,7 @@ local function generator( iterator )
             coroutine_yield()
             index = index + 1
 
-            if (index / 2) % alertStep == 0 or index == count then
+            if ( index / 2 ) % alertStep == 0 or index == count then
                 alert()
             end
 
@@ -51,10 +51,15 @@ local function setup( func )
     )
 end
 
+--- Given an existing function using pairs/ipairs, process the function in a background thread
+--- @param func function The function that uses pairs/ipairs
 function gb.Thread( func )
     table.insert( workers, coroutine.create( setup( func ) ) )
 end
 
+--- Run the given function on every element in the table in a background thread
+--- @param func function The function to run on the table elements
+--- @param tbl table The table containing elements to run the function on
 function gb.ThreadWork( func, tbl )
     msg = MsgC
 
