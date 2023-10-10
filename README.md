@@ -84,9 +84,13 @@ gb.Diff( Entity( 106 ):GetSaveTable(), Entity( 109 ):GetSaveTable() )
 ### File Finding
 If you ever need to find certain files by name, the asynchronous **`gb.Grep`** function is the tool for you.
 
-https://github.com/CFC-Servers/gm_gangbox/assets/7936439/f16543dc-1848-4ca3-9bb7-31de9bd8d006
 
-https://github.com/CFC-Servers/gm_gangbox/assets/7936439/73a87f72-8bde-4e22-a8dd-1f720c6da67d
+https://github.com/CFC-Servers/gm_gangbox/assets/7936439/0e71a36a-daca-4b8e-8756-c564a0506787
+
+
+
+https://github.com/CFC-Servers/gm_gangbox/assets/7936439/5c7bb7db-6242-4bcd-b894-8d9638e3c9c9
+
 
 <details>
 <summary><h4> <strong><img src="https://user-images.githubusercontent.com/7936439/200705159-4c51d043-82a3-4d15-a335-291bb26a5528.png" width="15"> <code>gb.Grep( string search, string scope, string path)</code></strong> </h4></summary>
