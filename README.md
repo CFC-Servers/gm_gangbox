@@ -10,6 +10,7 @@ Gangbox offers a lot of useful, time-saving modules. Here are a few of the major
 - :left_right_arrow: Git-Like Table Diffs
 - :wastebasket: Helpful Garbage Collector functions
 - :mag_right: Asynchronous, grep-like file finding
+- :1234: Bitflag pretty-printing
 - :game_die: Functions to return random datasets for testing
 - :memo: Table helper functions (like Map/Filter)
 - :thread: Super simple Threading functions to run large amounts of work asynchronously
@@ -113,6 +114,44 @@ gb.Grep( "wiremonitorbig", "THIRDPARTY" )
 Or, in your console:
 ```
 grep wiremonitorbig THIRDPARTY
+```
+</details>
+
+---
+
+### Bitflag Parsing / Pretty-printing
+Bitflags are common in Garry's Mod. Unfortunately, they're difficult to understand on their own.
+
+Gangbox's `ParseFlags` function will parse any Bitflag in the game and print each flag that makes up the full bitflag.
+
+![hl2_cRPTVn4658](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/90b1f652-3e61-4138-9d8b-2ea093629ebb)
+
+
+<details>
+<summary><h4> <strong><img src="https://user-images.githubusercontent.com/7936439/200705159-4c51d043-82a3-4d15-a335-291bb26a5528.png" width="15"> <code>gb.ParseFlags( any subject, table? flagSet )</code></strong> </h4></summary>
+
+#### <ins>**Description**</ins>
+Print all of the flags within a given Bitflag.
+
+#### <ins>**Arguments**</ins>
+1. **`any subject`**
+    - The bitflag, or subject containing the Bitflag.
+    - If `subject` is a number, the second parameter _(`flagSet`)_ is required to tell the function what kind of Bitflag it is.
+    - Can be one of:
+    	- `number`: The bitflag number itself _(`flagSet` must be provided)_
+     	- `ConVar`: Prints the ConVar's `FCVAR_` flags
+      	- `IMaterial`: Prints the Material's `$flags` and `$flags2` details
+      	- `Entity`: Prints the Entity's Engine (`EFL_`), Spawn (`SF_`), and Solid (`FSOLID_`) flags
+      	- `CTakeDamageInfo`: Prints the DamageInfo's Damage Type (`DMG_`) flags
+      	- `TraceResult` struct: Prints the Surface (`SURF_`) or Displacement Surface (`DISPSURF_`) flags
+2. **`table? flagSet`** _(optional)_
+   - A bitflag table to parse the given `subject` with
+   - (You'll likely want to use one of the flagsets stored in `gb.Bitflags`)
+
+#### <ins>**Example**</ins>
+Parse a convar's Bitflags
+```lua
+gb.ParseFlags( GetConVar( "example_convar" ) )
 ```
 </details>
 
