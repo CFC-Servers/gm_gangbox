@@ -2,7 +2,7 @@ do
     local allEnts
 
     --- Returns a random boolean
-    --- @param trueWeight number? The weight of true (1 means 50% chance of true, 2 means 33% chance of true, 0.5 means 66% chance of true, etc.)
+    --- @param trueWeight number? Adjusts the likelihood of returning 'true'. (e.g. 1 means equal chance, 2 means double chance of true, 0.5 means half chance of true
     --- @return boolean "The random boolean"
     function gb.RandomBool( trueWeight )
         trueWeight = trueWeight or 1
@@ -40,8 +40,8 @@ do
 
     --- Generate a random string with the given length and, optionally, utf8 range
     --- @param len number The length of the output string
-    --- @param minChar number? The minimum utf8 character to use
-    --- @param maxChar number? The maximum utf8 character to use
+    --- @param minChar number? The minimum utf8 character to use (defaults to 97)
+    --- @param maxChar number? The maximum utf8 character to use (defaults to 122)
     --- @return string "The generated string"
     function gb.RandomString( len, minChar, maxChar )
         local ret = ""

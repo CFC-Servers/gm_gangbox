@@ -44,7 +44,7 @@ local function setup( func )
         setmetatable(
             {
                 pairs = generator( pairs ),
-                ipairs = generator( ipairs ),
+                ipairs = generator( ipairs )
             },
             { __index = _G }
         )
@@ -54,6 +54,7 @@ end
 --- Given an existing function using pairs/ipairs, process the function in a background thread
 --- @param func function The function that uses pairs/ipairs
 function gb.Thread( func )
+    msg = MsgC
     table.insert( workers, coroutine.create( setup( func ) ) )
 end
 
@@ -66,13 +67,12 @@ function gb.ThreadWork( func, tbl )
     table.insert( workers, coroutine.create( function()
         local iter = generator( pairs )
         for k, v in iter( tbl ) do
-            print( "inner iter", k, v )
             func( k, v )
         end
     end ) )
 end
 
-local duration = engine.TickInterval() * 0.25
+local duration = engine.TickInterval() * 0.35
 hook.Add( "Think", "GMN_Threads", function()
     if #workers == 0 then return end
 
@@ -83,7 +83,7 @@ hook.Add( "Think", "GMN_Threads", function()
 
     local idx = 1
     while SysTime() < limit do
-        if idx > #workers then break end
+        if idx > #workers then idx = 1 end
 
         local item = workers[idx]
 
