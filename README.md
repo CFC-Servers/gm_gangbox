@@ -57,7 +57,7 @@ As a result, there's really no way to know that this failed. Gangbox prints an a
 Sometimes you need to compare two similar, but different tables.
 Usually this means you print both tables and manually compare them.
 
-But that's tedious. Gangbox offers a function and a concommand which print a git-like Diff between two tables.
+But that's tedious. Gangbox offers a function that prints a git-like Diff between two tables.
 
 ![hl2_LRckBdwxF2](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/856e322a-6820-4da9-9320-5182dc5fd19b)
 
