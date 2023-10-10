@@ -124,8 +124,7 @@ Bitflags are common in Garry's Mod. Unfortunately, they're difficult to understa
 
 Gangbox's `ParseFlags` function will parse any Bitflag in the game and print each flag that makes up the full bitflag.
 
-![hl2_cRPTVn4658](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/90b1f652-3e61-4138-9d8b-2ea093629ebb)
-
+![hl2_cRPTVn4658](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/34de8edb-5cd4-4458-9d4e-a2ddbbf5ed75)
 
 <details>
 <summary><h4> <strong><img src="https://user-images.githubusercontent.com/7936439/200705159-4c51d043-82a3-4d15-a335-291bb26a5528.png" width="15"> <code>gb.ParseFlags( any subject, table? flagSet )</code></strong> </h4></summary>
