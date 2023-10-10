@@ -28,15 +28,17 @@ do
         end
 
         if path == "" then
-            MsgC( colors.highlight, "[GB] ", colors.bad, "Empty file path on file.Write\n" )
-            debug.Trace()
+            MsgC( colors.highlight, "[GB] " )
+            MSgC( colors.bad, "Empty file path on file.Write\n" )
+            ErrorNoHaltWithStack( "[GB] Empty file path on file.Write! (This is a no-op)" )
             return file._GB_Write( path, data )
         end
 
         local suffix = string.GetExtensionFromFilename( path )
         if not validSuffix[suffix] then
-            MsgC( colors.highlight, "[GB] ", colors.bad, "Invalid file suffix on file.Write: '" .. path .. "'\n" )
-            debug.Trace()
+            MsgC( colors.highlight, "[GB] " )
+            MsgC( colors.bad, "Invalid file suffix on file.Write: '" .. path .. "'\n" )
+            ErrorNoHaltWithStack( "[GB] Invalid file suffix on file.Write! (This is a no-op)" )
         end
 
         return file._GB_Write( path, data )
@@ -61,7 +63,8 @@ do
 
             MsgC( colors.bold, "  Func: " )
             MsgC( colors.details, tostring( func ) .. "\n" )
-            debug.Trace()
+
+            ErrorNoHaltWithStack( "[GB] Entity:AddCallback with nil return!" )
         end
 
         return ret

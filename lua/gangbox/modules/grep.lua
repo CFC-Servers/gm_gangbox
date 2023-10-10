@@ -94,6 +94,8 @@ end
 
 --- Performs an asynchronous text search in all GMod file names and prints them
 --- @param str string The string to search file names for
+--- @param scope string The Game Path to search in (GAME/DATA/Lua/etc.) (defaults to GAME)
+--- @param path string? The path to start looking in (defaults to /)
 function gb.Grep( str, scope, path )
     scope = scope or "GAME"
     path = path or ""
