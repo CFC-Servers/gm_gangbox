@@ -36,7 +36,7 @@ file.Write( "test", "this fails because it has no suffix" )
 It will simply do nothing, because the filename does not have a [valid suffix](https://wiki.facepunch.com/gmod/file.Write).
 
 With Gangbox, a message is printed _(and a non-halting error thrown)_ in your terminal/output if you write to an invalid suffix:
-![hl2_owARE2QK0x](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/867e0e07-63dd-4aaf-b094-7aa1521ed31a)
+![hl2_owARE2QK0x](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/e859fa0b-1373-4737-af77-d235f4863868)
 
 </details>
 
@@ -49,7 +49,7 @@ Developers typically don't check for this, because realistically it's just a dev
 
 As a result, there's really no way to know that this failed. Gangbox prints an alert and raises a (non-halting) error if this happens, giving you visibility to an otherwise frustrating situation:
 
-![hl2_FleE3umtSL](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/cdeb6d2d-afcd-4b1f-8617-a2211fe1e6ca)
+![hl2_FleE3umtSL](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/076b78f3-1325-4a04-9f86-ce91473f4eb7)
 </details>
 
 ---
@@ -60,7 +60,7 @@ Usually this means you print both tables and manually compare them.
 
 But that's tedious. Gangbox offers a function that prints a git-like Diff between two tables.
 
-![hl2_LRckBdwxF2](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/856e322a-6820-4da9-9320-5182dc5fd19b)
+![hl2_LRckBdwxF2](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/4145a7f8-1778-4e01-8fb3-9eb6239f0e99)
 
 
 <details>
@@ -374,7 +374,7 @@ Returns a random Color
 #### <ins>**Example**</ins>
 Return a random Color
 
-![image](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/e92fd92a-5738-4205-b9d9-d5640e8af0d8)
+![hl2_d5ozt9FXqU](https://github.com/CFC-Servers/gm_gangbox/assets/7936439/92205820-4488-49e2-93e8-b6ce5eaad86d)
 
 </details>
 
