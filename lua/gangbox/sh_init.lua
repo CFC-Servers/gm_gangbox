@@ -6,6 +6,10 @@ gb = {}
 AddCSLuaFile( "modules/colors.lua" )
 include( "modules/colors.lua" )
 
+if SERVER then
+    include( "modules/ansic.lua" )
+end
+
 AddCSLuaFile( "modules/tables.lua" )
 include( "modules/tables.lua" )
 
@@ -27,5 +31,8 @@ include( "modules/gc.lua" )
 AddCSLuaFile( "modules/thread.lua" )
 include( "modules/thread.lua" )
 
-AddCSLuaFile( "modules/grep.lua" )
-include( "modules/grep.lua" )
+AddCSLuaFile( "modules/find/find.lua" )
+include( "modules/find/find.lua" )
+
+AddCSLuaFile( "modules/file.lua" )
+include( "modules/file.lua" )

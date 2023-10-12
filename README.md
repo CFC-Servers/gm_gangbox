@@ -9,7 +9,7 @@ Gangbox offers a lot of useful, time-saving modules. Here are a few of the major
 - :warning: Alerts for no-op or silent failures in the GMod API
 - :left_right_arrow: Git-Like Table Diffs
 - :wastebasket: Helpful Garbage Collector functions
-- :mag_right: Asynchronous, grep-like file finding
+- :mag_right: Asynchronous file finding
 - :1234: Bitflag pretty-printing
 - :game_die: Functions to return random datasets for testing
 - :memo: Table helper functions (like Map/Filter)
@@ -82,7 +82,7 @@ gb.Diff( Entity( 106 ):GetSaveTable(), Entity( 109 ):GetSaveTable() )
 ---
 
 ### File Finding
-If you ever need to find certain files by name, the asynchronous **`gb.Grep`** function is the tool for you.
+If you ever need to find certain files by name, the asynchronous **`gb.Find`** function is the tool for you.
 
 
 https://github.com/CFC-Servers/gm_gangbox/assets/7936439/0e71a36a-daca-4b8e-8756-c564a0506787
@@ -93,12 +93,12 @@ https://github.com/CFC-Servers/gm_gangbox/assets/7936439/5c7bb7db-6242-4bcd-b894
 
 
 <details>
-<summary><h4> <strong><img src="https://user-images.githubusercontent.com/7936439/200705159-4c51d043-82a3-4d15-a335-291bb26a5528.png" width="15"> <code>gb.Grep( string search, string scope, string path)</code></strong> </h4></summary>
+<summary><h4> <strong><img src="https://user-images.githubusercontent.com/7936439/200705159-4c51d043-82a3-4d15-a335-291bb26a5528.png" width="15"> <code>gb.Find( string search, string scope, string path)</code></strong> </h4></summary>
 
 #### <ins>**Description**</ins>
-`gb.Grep` will asynchronously search through all (or a subset) of the Game files and print a list of any files that match your string search.
+`gb.Find` will asynchronously search through all (or a subset) of the Game files and print a list of any files that match your string search.
 
-You may also use the `grep` concommand.
+You may also use the `gbfind` concommand.
 
 #### <ins>**Arguments**</ins>
 1. **`string search`**
@@ -112,12 +112,12 @@ You may also use the `grep` concommand.
 #### <ins>**Example**</ins>
 Searches all addons for the string `"wiremonitorbig"`
 ```lua
-gb.Grep( "wiremonitorbig", "THIRDPARTY" )
+gb.Find( "wiremonitorbig", "THIRDPARTY" )
 ````
 
 Or, in your console:
 ```
-grep wiremonitorbig THIRDPARTY
+gbfind wiremonitorbig THIRDPARTY
 ```
 </details>
 

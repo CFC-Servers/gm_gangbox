@@ -14,7 +14,8 @@ local function colorToAnsi( col )
     return string_format( "%s%d;%d;%dm", startColor, r, g, b )
 end
 
-return function( ... )
+--- MsgC but uses ANSI printing instead
+function gb.AnsiC( ... )
     local line = ""
     local IsColor = IsColor
 

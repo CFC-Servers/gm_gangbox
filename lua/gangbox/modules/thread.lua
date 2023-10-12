@@ -72,7 +72,7 @@ function gb.ThreadWork( func, tbl )
     end ) )
 end
 
-local duration = engine.TickInterval() * 0.35
+local duration = engine.TickInterval() * 0.65
 hook.Add( "Think", "GMN_Threads", function()
     if #workers == 0 then return end
 
