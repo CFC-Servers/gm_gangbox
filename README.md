@@ -85,18 +85,14 @@ gb.Diff( Entity( 106 ):GetSaveTable(), Entity( 109 ):GetSaveTable() )
 If you ever need to find certain files by name, the asynchronous **`gb.Find`** function is the tool for you.
 
 
-https://github.com/CFC-Servers/gm_gangbox/assets/7936439/0e71a36a-daca-4b8e-8756-c564a0506787
-
-
-
-https://github.com/CFC-Servers/gm_gangbox/assets/7936439/5c7bb7db-6242-4bcd-b894-8d9638e3c9c9
+https://github.com/CFC-Servers/gm_gangbox/assets/7936439/9048feec-76ef-48df-a677-c4a6809d1126
 
 
 <details>
 <summary><h4> <strong><img src="https://user-images.githubusercontent.com/7936439/200705159-4c51d043-82a3-4d15-a335-291bb26a5528.png" width="15"> <code>gb.Find( string search )</code></strong> </h4></summary>
 
 #### <ins>**Description**</ins>
-`gb.Find` will asynchronously search through all (or a subset) of the Game files and print a list of any files that match your string search.
+`gb.Find` will asynchronously search through all of the Game files and print a list of any files that match your string search.
 
 You may also use the `gbfind` concommand.
 
