@@ -29,7 +29,7 @@ do
 
         if path == "" then
             MsgC( colors.highlight, "[GB] " )
-            MSgC( colors.bad, "Empty file path on file.Write\n" )
+            MsgC( colors.bad, "Empty file path on file.Write\n" )
             ErrorNoHaltWithStack( "[GB] Empty file path on file.Write! (This is a no-op)" )
             return file._GB_Write( path, data )
         end

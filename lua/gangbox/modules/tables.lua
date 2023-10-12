@@ -51,3 +51,24 @@ gb.CountRecursive = function( tbl, visited )
     return count
 end
 
+--- Picks a number of random elements from the given table
+--- @param tbl table The sequential table to pick from
+--- @param count number The number of elements to return
+gb.PickRandom = function( tbl, count )
+    local keys = table.GetKeys( tbl )
+    table.Shuffle( keys )
+
+    local selected = {}
+    for i = 1, count do
+        local key = keys[i]
+        selected[key] = tbl[key]
+    end
+
+    if not table.IsSequential( tbl ) then
+        return selected
+    end
+
+    -- If the input table is sequential, so should the output
+    return table.ClearKeys( selected )
+end
+
