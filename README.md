@@ -93,7 +93,7 @@ https://github.com/CFC-Servers/gm_gangbox/assets/7936439/5c7bb7db-6242-4bcd-b894
 
 
 <details>
-<summary><h4> <strong><img src="https://user-images.githubusercontent.com/7936439/200705159-4c51d043-82a3-4d15-a335-291bb26a5528.png" width="15"> <code>gb.Find( string search, string scope, string path)</code></strong> </h4></summary>
+<summary><h4> <strong><img src="https://user-images.githubusercontent.com/7936439/200705159-4c51d043-82a3-4d15-a335-291bb26a5528.png" width="15"> <code>gb.Find( string search )</code></strong> </h4></summary>
 
 #### <ins>**Description**</ins>
 `gb.Find` will asynchronously search through all (or a subset) of the Game files and print a list of any files that match your string search.
@@ -103,21 +103,16 @@ You may also use the `gbfind` concommand.
 #### <ins>**Arguments**</ins>
 1. **`string search`**
     - The substring to search for in all qualifying file names
-2. **`string scope`** _(optional)_
-    - The Game Scope to search in _(defaults to `GAME`)_
-    - Full list [here](https://wiki.facepunch.com/gmod/File_Search_Paths)
-3. **`string path`** _(optional)_
-    - The file path to start searching in _(defaults to root of the given Scope)_
 
 #### <ins>**Example**</ins>
-Searches all addons for the string `"wiremonitorbig"`
+Searches all files for the string `"wiremonitorbig"`
 ```lua
-gb.Find( "wiremonitorbig", "THIRDPARTY" )
+gb.Find( "wiremonitorbig" )
 ````
 
 Or, in your console:
 ```
-gbfind wiremonitorbig THIRDPARTY
+gbfind wiremonitorbig
 ```
 </details>
 
