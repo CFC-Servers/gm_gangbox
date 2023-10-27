@@ -14,6 +14,7 @@
 --- @field EntitySolid gb.FlagSet
 --- @field EntityEngine gb.FlagSet
 --- @field Texture gb.FlagSet
+--- @field Contents gb.FlagSet
 gb.Bitflags = {
 
     --- Material "$flags" bitflags
@@ -853,6 +854,106 @@ gb.Bitflags = {
         },
         DISPSURF_SURFPROP2 = {
             value = 16, description = "?"
+        }
+    },
+
+    --- Contents CONTENTS_ flags for PhysObj and others
+    Contents = {
+        CONTENTS_EMPTY = {
+            value = 0, description = "Things that are not solid"
+        },
+        CONTENTS_SOLID = {
+            value = 1, description = "Things that are solid"
+        },
+        CONTENTS_WINDOW = {
+            value = 2, description = "Glass"
+        },
+        CONTENTS_AUX = {
+            value = 4, description = "?"
+        },
+        CONTENTS_GRATE = {
+            value = 8, description = "Bullets go through, solids don't"
+        },
+        CONTENTS_SLIME = {
+            value = 16, description = "?"
+        },
+        CONTENTS_WATER = {
+            value = 32, description = "Hits world but not skybox"
+        },
+        CONTENTS_BLOCKLOS = {
+            value = 64, description = "Things that block line of sight"
+        },
+        CONTENTS_OPAQUE = {
+            value = 128, description = "Things that block light"
+        },
+        CONTENTS_TESTFOGVOLUME = {
+            value = 256, description = "?"
+        },
+        CONTENTS_TEAM4 = {
+            value = 512, description = "?"
+        },
+        CONTENTS_TEAM3 = {
+            value = 1024, description = "?"
+        },
+        CONTENTS_TEAM1 = {
+            value = 2048, description = "?"
+        },
+        CONTENTS_TEAM2 = {
+            value = 4096, description = "?"
+        },
+        CONTENTS_IGNORE_NODRAW_OPAQUE = {
+            value = 8192, description = "?"
+        },
+        CONTENTS_MOVEABLE = {
+            value = 16384, description = "?"
+        },
+        CONTENTS_AREAPORTAL = {
+            value = 32768, description = "?"
+        },
+        CONTENTS_PLAYERCLIP = {
+            value = 65536, description = "?"
+        },
+        CONTENTS_MONSTERCLIP = {
+            value = 131072, description = "?"
+        },
+        CONTENTS_CURRENT_0 = {
+            value = 262144, description = "?"
+        },
+        CONTENTS_CURRENT_180 = {
+            value = 1048576, description = "?"
+        },
+        CONTENTS_CURRENT_270 = {
+            value = 2097152, description = "?"
+        },
+        CONTENTS_CURRENT_90 = {
+            value = 524288, description = "?"
+        },
+        CONTENTS_CURRENT_DOWN = {
+            value = 8388608, description = "?"
+        },
+        CONTENTS_CURRENT_UP = {
+            value = 4194304, description = "?"
+        },
+        CONTENTS_DEBRIS = {
+            value = 67108864, description = "?"
+        },
+        CONTENTS_DETAIL = {
+            value = 134217728, description = "?"
+        },
+        CONTENTS_HITBOX = {
+            value = 1073741824, description = "Hitbox"
+        },
+        CONTENTS_LADDER = {
+            value = 536870912, description = "Ladder"
+        },
+        CONTENTS_MONSTER = {
+            value = 33554432, description = "NPCs"
+        },
+        CONTENTS_ORIGIN = {
+            value = 16777216, description = "?"
+        },
+        CONTENTS_TRANSLUCENT = {
+            value = 268435456, description = "Hits world but not skybox"
         }
     },
 }

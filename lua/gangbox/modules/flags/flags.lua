@@ -129,6 +129,15 @@ function gb.ParseFlags( subject, flagset )
             end
         end
 
+    elseif typeID == TYPE_PHYSOBJ then
+        MsgC( headerColor, "PhysObj content flags for: " )
+        MsgC( infoColor, tostring( subject:GetEntity() ), "\n\n" )
+
+        local flags = subject:GetContents()
+        if flags ~= 0 then
+            parseFlags( flags, Bitflags.Contents )
+        end
+
     elseif typeID == TYPE_TABLE then
         if isTrace( subject ) then
             MsgC( headerColor, "Surface Flags for:  " )
@@ -147,6 +156,14 @@ function gb.ParseFlags( subject, flagset )
                 if dispFlags ~= 0 then
                     MsgC( headerColor, "DispFlags:\n" )
                     parseFlags( dispFlags, Bitflags.DispSurface )
+                end
+            end
+
+            do
+                local contentsFlags = subject.Contents or 0
+                if contentsFlags ~= 0 then
+                    MsgC( headerColor, "Contents:\n" )
+                    parseFlags( contentsFlags, Bitflags.Contents )
                 end
             end
         end
