@@ -8,6 +8,7 @@ include( "modules/colors.lua" )
 
 if SERVER then
     include( "modules/ansic.lua" )
+    include( "modules/retry.lua" )
 end
 
 AddCSLuaFile( "modules/tables.lua" )
