@@ -1,6 +1,7 @@
--- Don't add ANSI colouring on dev/main branch on windows as it breaks colour output
-if system.IsWindows() and BRANCH != "x86-64" then return end
 -- MsgC but with Colors converted to ANSI codes for server console output
+
+-- Don't add ANSI colouring on dev/main branch on windows as it breaks colour output
+if system.IsWindows() and BRANCH ~= "x86-64" then return end
 
 local _MsgC = rawget( _G, "MsgC" )
 
