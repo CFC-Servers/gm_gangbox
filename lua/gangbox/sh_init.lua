@@ -37,3 +37,6 @@ include( "modules/find/find.lua" )
 
 AddCSLuaFile( "modules/file.lua" )
 include( "modules/file.lua" )
+
+AddCSLuaFile( "modules/cls.lua" )
+include( "modules/cls.lua" )

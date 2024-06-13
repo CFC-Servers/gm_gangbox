@@ -63,14 +63,14 @@ local function writeContentFile( content, mount )
 end
 
 return function( mount )
-    -- local validity = validMounts[mount]
-    -- if not validity then
-    --     error( "Given game name was not valid! '" .. mount .. "' is not a valid mount folder. Expected a folder name from engine.GetGames()" )
-    -- end
+    local validity = validMounts[mount]
+    if not validity then
+        error( "Given game name was not valid! '" .. mount .. "' is not a valid mount folder. Expected a folder name from engine.GetGames()" )
+    end
 
-    -- if not validity.available then
-    --     error( "Game is not mounted! Please mount the game content, restart, and try again" )
-    -- end
+    if not validity.available then
+        error( "Game is not mounted! Please mount the game content, restart, and try again" )
+    end
 
     print( "[GB] Game Content Generator started, the game will freeze briefly." )
 
