@@ -62,8 +62,9 @@ do
         if not allEnts then
             allEnts = ents.GetAll()
 
+            -- Remove clientside-only entities
             for i = #allEnts, 1, -1 do
-                if string.StartsWith( allEnts[i]:GetClass(), "class " ) then
+                if allEnts[i]:EntIndex() == -1 then
                     table.remove( allEnts, i )
                 end
             end
